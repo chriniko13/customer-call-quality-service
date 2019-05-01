@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Collection;
 
 @Data
 @NoArgsConstructor
@@ -13,9 +13,9 @@ public class AgentScoreSearchInfoResult {
 
     private String calculationStrategy;
     private long totalTimeInMS;
-    private List<AgentScorePerDay> results;
+    private Collection<AgentScorePerDay> results;
 
-    public AgentScoreSearchInfoResult(List<AgentScorePerDay> results) {
+    public AgentScoreSearchInfoResult(Collection<AgentScorePerDay> results) {
         this.results = results;
     }
 }

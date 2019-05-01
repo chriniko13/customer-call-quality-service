@@ -16,10 +16,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
@@ -48,7 +45,7 @@ public class AgentScoreCalculator implements AgentScoreFormula {
         int records = customerCallsByProvidedTimeIntervals.size();
 
         List<AgentScorePerDay> results = records > 1 && concurrentApproach
-                ? concurrentApproach(customerCallsByProvidedTimeIntervals, records)
+                ? new LinkedList<>(concurrentApproach(customerCallsByProvidedTimeIntervals, records))
                 : singleThreadApproach(customerCallsByProvidedTimeIntervals);
 
         results.sort(Comparator.comparing(AgentScorePerDay::getDate));

@@ -20,6 +20,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -86,7 +87,7 @@ public class CustomerCallQualityDbServiceTest {
         // then
         Assert.assertNotNull(result);
 
-        List<AgentScorePerDay> records = result.getResults();
+        List<AgentScorePerDay> records = new ArrayList<>(result.getResults());
         assertEquals(1, records.size());
 
         assertEquals("2017-04-01", records.get(0).getDate());
