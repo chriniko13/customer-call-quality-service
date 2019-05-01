@@ -51,11 +51,6 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
@@ -86,13 +81,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>27.1-jre</version>
-        </dependency>
-
         <!-- END: Dev Dependencies -->
 
 
