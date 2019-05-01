@@ -1,0 +1,5 @@
+{
+  "timestamp": "2019-04-30 11:30:22",
+  "status": 400,
+  "error": "provided startDate is after provided endDate"
+}

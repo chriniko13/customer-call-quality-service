@@ -1,0 +1,5 @@
+{
+  "timestamp": "2019-05-01 12:01:34",
+  "status": 400,
+  "error": " [Field error in object 'agentScoreSearchInfo' on field 'startDate',  default message [must match \"\\d{4}-\\d{1,2}-\\d{1,2}\"]] "
+}

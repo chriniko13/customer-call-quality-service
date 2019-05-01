@@ -1,0 +1,46 @@
+{
+  "calculationStrategy": "quality-heap-service",
+  "totalTimeInMS": 12,
+  "results": [
+    {
+      "date": "2017-04-01",
+      "agent_score": "-5.21"
+    },
+    {
+      "date": "2017-04-02",
+      "agent_score": "-7.2"
+    },
+    {
+      "date": "2017-04-03",
+      "agent_score": "-4.05"
+    },
+    {
+      "date": "2017-04-04",
+      "agent_score": "-4.5"
+    },
+    {
+      "date": "2017-04-05",
+      "agent_score": "-5.04"
+    },
+    {
+      "date": "2017-04-06",
+      "agent_score": "-5.36"
+    },
+    {
+      "date": "2017-04-07",
+      "agent_score": "-6.79"
+    },
+    {
+      "date": "2017-04-08",
+      "agent_score": "-3.37"
+    },
+    {
+      "date": "2017-04-09",
+      "agent_score": "-4.34"
+    },
+    {
+      "date": "2017-04-10",
+      "agent_score": "-5.89"
+    }
+  ]
+}
