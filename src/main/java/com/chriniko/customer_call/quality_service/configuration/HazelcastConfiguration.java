@@ -16,6 +16,10 @@ public class HazelcastConfiguration {
 
     public static final String QUALITY_DB_SERVICE_RESULTS = "quality-db-service-results";
 
+    public static final String DEFAULT_JOB_TRACKER = "default-job-tracker";
+
+    public static final String CUSTOMER_CALLS_BY_DOC_ID = "customer-calls-by-document-id";
+
     private static final String INSTANCE_NAME = "customer-call-quality-service@"
             + ManagementFactory.getRuntimeMXBean().getName()
             + " --- hazelcast-instance";
@@ -25,6 +29,17 @@ public class HazelcastConfiguration {
         Config config = new Config();
 
         config.setInstanceName(INSTANCE_NAME)
+                .addJobTrackerConfig(
+                        new JobTrackerConfig()
+                                .setName(DEFAULT_JOB_TRACKER)
+                )
+                .addMapConfig(
+                        new MapConfig()
+                                .setName(CUSTOMER_CALLS_BY_DOC_ID)
+                                .setMaxSizeConfig(new MaxSizeConfig(15_000, MaxSizeConfig.MaxSizePolicy.FREE_HEAP_SIZE))
+                                .setEvictionPolicy(EvictionPolicy.NONE)
+                                .setTimeToLiveSeconds(-1)
+                )
                 .addMapConfig(
                         new MapConfig()
                                 .setName(QUALITY_DB_SERVICE_RESULTS)

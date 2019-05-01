@@ -63,7 +63,9 @@ public class CustomerCall implements DataSerializable {
         out.writeUTF(sentiment);
         out.writeUTF(politeness);
         out.writeUTF(duration);
-        out.writeUTF(justDate.toString());
+        if (justDate != null) {
+            out.writeUTF(justDate.toString());
+        }
     }
 
     @Override
@@ -76,6 +78,10 @@ public class CustomerCall implements DataSerializable {
         sentiment = in.readUTF();
         politeness = in.readUTF();
         duration = in.readUTF();
-        justDate = LocalDate.parse(in.readUTF());
+
+        try {
+            justDate = LocalDate.parse(in.readUTF());
+        } catch (IOException e) {
+        }
     }
 }
